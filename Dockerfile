@@ -8,7 +8,7 @@ COPY public public
 COPY routes routes
 COPY views views 
 COPY bin bin
-COPY app.js
+COPY app.js .
 
 RUN npm install
 
