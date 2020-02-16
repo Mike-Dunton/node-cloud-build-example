@@ -17,8 +17,8 @@ RUN npm install
 # ----- Release ------ #
 FROM dependencies AS release
 WORKDIR /app
-COPY --from=build app/package.json .
-COPY --from=build app/node_modules node_modules
+COPY --from=base app/package.json .
+COPY --from=base app/node_modules node_modules
 
 ENV NODE_ENV production
 
